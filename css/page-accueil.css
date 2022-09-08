@@ -1,0 +1,1168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Arial", sans-serif;
+}
+
+button {
+  box-shadow: rgb(34 34 43 / 15%) 0px 3px 11px 0px;
+}
+@font-face {
+  font-family: "Rubik Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Regular"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Italic"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Light"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Light Italic"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Medium"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Medium Italic"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Bold"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Bold Italic"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Black"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Rubik Black Italic"),
+    url("../fonts/rubik-cufonfonts-webfont/Rubik-BlackItalic.woff") format("woff");
+}
+
+body {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+/* section : header */
+header {
+  z-index: 3;
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/* section : header de gauche*/
+.left {
+  background-color: none;
+  display: grid;
+  grid-template-columns: 0.1fr 5fr;
+  justify-content: start;
+  padding: 20px 30% 0px 30px!important;
+  height : 100%;
+}
+/* section : Menu burger*/
+.menu-burger{
+ cursor:pointer;
+ display:inline;
+}
+   .line{
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .line {
+    height: 2px;
+    width: 30px;
+    background: rgb(255, 255, 255);
+    margin: 5px auto;
+  }
+/* section : txt : Menu burger */
+.txt_left {
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+/* Search bar */
+.mask_searchBar {
+display: none;
+}
+
+.scrolled
+{
+display: block !important;
+}
+
+.search-box {
+display: flex;
+width: 300px;
+height: 35px;
+position: relative;
+display: flex;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+
+.search-input {
+margin-left: 25px;
+width: 100%;
+font-family: 'Arial', sans-serif;
+font-size: 14px;
+padding: 15px 45px 15px 15px;
+background-color: #ffffff;
+border: 1px solid rgb(225, 225, 228);
+color: rgb(70, 70, 80);
+border-radius: 3px;
+transition: all .4s;
+}
+.search-input::placeholder{
+color: rgb(146, 156, 176);;
+}
+.search-input:focus {
+outline: none;
+}
+
+.search-btn {
+background-color: transparent;
+font-size: 18px;
+padding: 7px 9px 5px 9px;
+margin-left:-45px;
+border:none;
+color: #6c6c6c;
+transition: all .4s;
+z-index: 10;
+box-shadow: none;
+}
+.search-btn:hover {
+cursor: pointer;
+}
+
+#img-loupe {
+  display: none;
+  }
+
+/* search bar suite (mobile) */
+#searchMobile{
+display: none;
+}
+/* Fond de couleur */
+
+.footer {
+position:fixed;
+bottom:5px;
+}
+
+.footer p {
+font-family: 'Montserrat', sans-serif;
+font-size:12px;
+color:#000;
+}
+
+.footer a {
+color: #fff;
+transition: all .4s;
+}
+
+.footer a:hover {
+color: #eaeaeb;
+}
+
+/* section : header du milieu*/
+.center{
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center img{
+  cursor: pointer;
+  height: 65px;
+  margin: 0;
+}
+
+/* section : header de droite*/
+.right {
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Bouton : S'identifier */
+
+.loginTop{
+  background-color: none;
+  height: 55px;
+  width: 180px;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-loginTop {
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  border: none;
+  background-color: rgb(254, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  border: none;
+  outline: 0px;
+  overflow: hidden;
+  padding: 0rem;
+  font-weight: 500;
+  line-height: 23px;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 55px;
+  border-radius: 3px;
+}
+
+.button-loginTop:hover {
+  background-color: rgb(229, 20, 20);
+  color: rgb(255, 255, 255);
+  outline: 3px solid rgb(233, 236, 241);
+}
+
+/* Fond d'écran à changer mensuellement */
+.backgroundChange {
+  z-index: 1;
+  height: 60.25vw;
+  position: relative;
+  background-image: url(../images/Sans\ titre-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  background-position: center top;
+  top: 0;
+  }
+
+  .backgroundChange::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 290px;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0) 90%);
+} 
+
+/* Search bar centrale (pc :page d'accueil)*/
+
+.searchBar {
+top: 190px;
+left: 50%;
+transform: translate(-0%, -50%);
+border-radius: 2px;
+display: flex;
+width: 450px;
+height: 50px;
+padding: 4px 4px 4px 16px;
+background-color: rgba(255, 255, 255, 0.8);
+position: relative;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+
+.searchInput {
+margin: 0;
+padding: 1px 8px 1px 2px;
+width: 100%;
+font-family: "Rubik Regular", 'Arial', sans-serif;
+font-size: 16px;
+background-color: transparent;
+border: none;
+color: rgb(70, 70, 80);
+border-radius: 2px;
+transition: all .4s;
+
+}
+.searchInput::placeholder{
+display: flex;
+align-items: center;
+color: rgb(146, 156, 176);
+}
+.searchInput:focus {
+outline: none;
+}
+
+.searchButton {
+border-radius: 2px;
+border: 1px solid #fe0000;
+outline: 0px;
+overflow: hidden;
+padding: 0;
+height: 40px;
+min-width: 64px;
+font-size: 20px;
+line-height: 23px;
+white-space: nowrap;
+cursor: pointer;
+transition-property: background-color, border-color, color;
+transition-duration: 0.1s;
+transition-timing-function: ease-in-out;
+background-color: #fe0000;
+color: rgb(255, 255, 255);
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: center;
+box-shadow: none;
+}
+.searchButton:hover {
+cursor: pointer;
+background-color: #fa3f3f;
+}
+
+.searchButton > img {
+height: 18px;
+width: 18px;
+margin: 0;
+}
+
+/* Ensemble des sections */
+
+.allSection {
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  margin-top: 300px;
+  width: 100%;
+}
+/* Sections : Général*/
+
+.marge {
+  width: 100%;
+  max-width: 904px;
+  height: 100%;
+  margin: auto;
+  background-color: transparent!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.grid {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 904px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: auto;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: transparent!important;
+}
+
+/* Section : Vapeprivate Présente */
+.new {
+top: 0;
+width: 100%;
+height: 762px;
+background-color: transparent;
+padding-bottom: 64px;
+margin-top: 0;
+}
+
+.titreHaut {
+font-size: 42px;
+color: #fff;
+font-family: "Rubik Light", "Arial ", sans-serif;
+line-height: 50px;
+letter-spacing : -2px;
+}
+
+.sTitreHaut {
+font-size: 18px;
+color: #fff;
+font-family: "Arial ", sans-serif;
+line-height: 22px;
+font-weight: 600;
+}
+
+.elm {
+background-color: rgb(8, 1, 78);
+width: 100%;
+height: 100%;
+}
+
+/* Section : NOUVEAUTÉS DU JOUR, EN CE MOMENT, ENCORE QUELQUES JOURS */
+
+.ongoing {
+z-index: 1;
+width: 100%;
+height: 600px;
+background-color: rgb(255, 255, 255);
+padding: 40px 0px 64px;
+}
+
+.titreMilieu {
+font-size: 42px;
+color: rgb(70, 70, 80);
+font-family: "Rubik Light", "Arial ", sans-serif;
+line-height: 50px;
+letter-spacing : -2px;
+}
+
+.sTitreMilieu {
+font-size: 18px;
+color: rgb(70, 70, 80);
+font-family: "Arial ", sans-serif;
+line-height: 22px;
+font-weight: 600;
+}
+
+.elm {
+background-color: rgb(8, 1, 78);
+width: 100%;
+height: 100%;
+}
+
+/* Section : PROCHAINEMENT */
+
+.nextly {
+z-index: 1;
+width: 100%;
+height: 600px;
+background-color: #22222B;
+padding: 40px 0px 64px;
+}
+
+.titreBas {
+font-size: 42px;
+color: rgb(255, 255, 255);
+font-family: "Rubik Light", "Arial ", sans-serif;
+line-height: 50px;
+letter-spacing : -2px;
+}
+
+.sTitreBas {
+font-size: 18px;
+color: rgb(255, 255, 255);
+font-family: "Arial ", sans-serif;
+line-height: 22px;
+font-weight: 600;
+}
+
+.elm {
+background-color: rgb(102, 92, 218);
+width: 100%;
+height: 100%;
+position: relative;
+cursor: pointer;
+overflow:hidden;
+box-shadow: rgb(34 34 43 / 30%) 0px 3px 11px 0px;
+}
+
+#elemBanner {
+display: none;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+height: 182px;
+padding: 8px 16px 12px;
+background-color: rgb(255, 255, 255);
+}
+
+#topElemBanner {
+width: 100%;
+height: 40px;
+top: 0;
+padding: 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+background-color: rgb(255, 255, 255);
+}
+
+#aBanner{
+color: rgb(70, 70, 80);
+}
+
+#aBanner :hover {
+color: #fe0000;
+}
+
+#pBanner {
+font-size: 16px;
+background-color: none;
+}
+
+#spanBanner {
+margin: 0;
+font-weight: 600;
+cursor: pointer;
+font-size: 16px;
+}
+
+.txtBanner {
+font-size: 12px;
+margin: 16px 0px 8px;
+color: rgb(70, 70, 80);
+font-family: "Rubik Medium", "Arial ", sans-serif;
+}
+
+/* Section : PROCHAINEMENT */
+
+.bottomElemBanner {
+bottom: 0;
+width: 100%;
+height: 32px;
+background-color: rgb(255, 255, 255);
+display: flex;
+flex-direction: row;
+align-items: left;
+justify-content: flex-end;
+
+}
+.alert {
+width: 24px;
+height: 24px;
+margin: 4px 12px 4px 0px;
+}
+
+.arrowRight {
+width: 26px;
+height: 26px;
+margin: 3px 5px 3px 0px;
+}
+
+.elm:hover #elemBannerBas {
+display:flex;
+animation : slideUp 500ms;
+}
+
+@keyframes slideUp {
+from {
+  transform: translateY(50px);
+}
+
+to {
+  transform: translateY(0);
+}
+}
+
+#elemBannerBas {
+display: none;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 50px;
+padding: 0px 17px 0px 20px;
+background-color: rgba(18,18,23,255);
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+cursor:auto;
+}
+
+#elemBannerBas > a {
+background-color: rgba(18,18,23,255);
+color: #fff;
+cursor:auto;
+}
+
+#aBannerBas{
+color: rgb(255, 255, 255);
+background-color: transparent;
+}
+
+#aBannerBas:hover{
+color: rgb(255, 255, 255);
+background-color: transparent;
+}
+
+#spanBannerBas {
+margin: 0;
+font-weight: 600;
+font-size: 16px;
+background-color: transparent;
+}
+
+#imgBanner {
+width: 30px;
+height: 30px;
+background-image: url("../images/plus-grey.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 30px 30px;
+margin: 0;
+cursor: pointer;
+}
+
+#imgBanner:hover {
+background-image: url("../images/plus-red.png");
+}
+
+/*  Bloc complet : Vous n'avez encore rien vu */
+.container {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+	width: 100%;
+	min-width: 350px;
+	height: 350px;
+	background-image: linear-gradient(to top, rgb(255, 255, 255) 60%, transparent 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+/*  titre : Vous n'avez encore rien vu */
+.titre {
+	line-height: 50px;
+	font-weight: 600;
+	font-size: 28px;
+	color: rgb(70, 70, 80);
+}
+/*  texte : Vous n'avez encore rien vu */
+.txt {
+	line-height: 20px;
+	font-size: 18px;
+	color: rgb(70, 70, 80);
+  text-align: center;
+}
+
+/*  Bloc : S'inscrire + Se connecter */
+.bloc {
+        background: transparent;
+        width: 100%;
+        max-width: 450px;
+        height: 90px;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        text-align: center;
+        align-items: center;
+        }
+  
+/*  Bouton : S'inscrire */
+.register{
+    background-color: transparent;
+    height: 55px;
+    width: 200px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-register {
+    width: 100%;
+    border: none;
+    background-color: rgb(254, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    outline: 0px;
+    overflow: hidden;
+    padding: auto;
+    font-weight: 500;
+    line-height: 23px;
+    white-space: nowrap;
+    cursor: pointer;
+    height: 55px;
+    border-radius: 3px;
+  }
+  
+  .button-register:hover {
+    background-color: rgb(229, 20, 20);
+    color: rgb(255, 255, 255);
+    outline: 4px solid rgb(233, 236, 241);
+  }
+
+/*  Bouton : Se connecter */
+.login{
+    background-color: transparent;
+    height: 55px;
+    width: 200px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-login{
+    width: 100%;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(70, 70, 80);
+    font-size: 20px;
+    border: 1px solid rgb(233, 236, 241);
+    outline: 0px;
+    overflow: hidden;
+    padding: auto;
+    font-weight: 500;
+    line-height: 23px;
+    white-space: nowrap;
+    cursor: pointer;
+    height: 55px;
+    border-radius: 3px;
+  }
+  
+  .button-login:hover {
+    background-color: rgb(3, 28, 54);
+    color: rgb(255, 255, 255);
+    outline: 3px solid rgb(233, 236, 241);
+  }
+/*  Bouton : Se connecter */
+  .whoAreWe {
+	color: rgb(122, 120, 132);
+	font-size: 1em;
+	height: 45px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.whoAreWe:hover {
+	color: rgb(3, 28, 54);
+}
+@media (max-width: 1025px){
+
+/* section : header */
+header {
+  height: 70px;
+}
+#img {
+height: 55px;
+} 
+
+/* section : header de gauche*/
+.left {
+padding: 25px 10px 0px 25px!important;
+}
+
+.line {
+width: 30px;
+margin: 4px auto;
+}
+/* section : txt : Menu burger */
+.txt_left {
+display: none;
+}
+.search-box {
+display: none;
+}
+
+#img-loupe {
+display: block;
+margin-left: 25px;
+margin-top: 2px;
+height: 18px;
+width: 18px;
+cursor: pointer;
+}
+
+#annuler {
+  padding: 0px 16px 0px 8px;
+  margin:11px 0px 11px 0px;
+  height: 26px;
+  font-family: "Rubik Regular", arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  }
+
+
+  .right {
+    padding: 10px 20px 10px 0px!important;
+  }
+
+  /*  Bouton : Se connecter */
+.loginTop{
+  width: 160px!important;
+  height: 50px!important;
+}
+
+.button-loginTop{
+  height: 50px!important;
+}
+
+/* Search bar centrale (pc :page d'accueil)*/
+
+.searchBar {
+display: none;
+}
+
+/* Ensemble des sections */
+
+.allSection {
+margin-top: 15%;
+}
+
+/* Sections : Général*/
+
+.marge {
+max-width: 642px;
+}
+
+.grid {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 642px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  }
+
+/* Section : Vapeprivate Présente */
+
+.new {
+margin-top: 13%;
+height: 511px;
+}
+
+.titreHaut {
+font-size: 42px;
+color: rgb(70, 70, 80);
+}
+
+.sTitreHaut {
+font-size: 18px;
+color: rgb(70, 70, 80);
+}
+
+#elemBanner {
+display: none;
+}
+
+/* Section : NOUVEAUTÉS DU JOUR, EN CE MOMENT, ENCORE QUELQUES JOURS */
+
+.ongoing {
+height: 446px;
+padding: 40px 0px 64px;
+}
+
+
+/* Section : PROCHAINEMENT */
+
+.nextly {
+height: 446px;
+padding: 40px 0px 64px;
+}
+
+}
+
+
+@media (max-width: 769px){
+
+/* Ensemble des sections */
+
+.allSection {
+margin-top: 15%;
+}
+
+/* Sections : Général*/
+
+.marge {
+  max-width: 435px;
+  }
+
+  .grid {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 642px;
+  height: 100%;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  }
+
+/* Section : Vapeprivate Présente */
+
+.new {
+margin-top: 18%;
+height: 1101px;
+padding-bottom: 48px;
+}
+
+/* Ensemble des sections */
+
+.allSection {
+margin-top: 15%;
+}
+
+.marge {
+max-width: 435px;
+}
+
+.titreHaut {
+font-size: 37px;
+}
+
+.sTitreHaut {
+font-size: 18px;
+}
+
+.grid {
+margin-top: 30px;
+width: 100%;
+max-width: 642px;
+height: 100%;
+grid-template-columns: 1fr;
+gap: 13px;
+}
+
+/* Section : NOUVEAUTÉS DU JOUR, EN CE MOMENT, ENCORE QUELQUES JOURS */
+
+.ongoing {
+height: 825px;
+padding: 40px 0px 48px;
+}
+
+.titreMilieu {
+font-size: 37px;
+}
+
+.sTitreMilieu {
+font-size: 18px;
+}
+
+/* Section : PROCHAINEMENT */
+
+.nextly {
+height: 825px;
+padding: 40px 0px 48px;
+}
+
+.titreBas {
+font-size: 37px;
+}
+
+.sTitreBas {
+font-size: 18px;
+}
+}
+
+@media (max-width: 641px){
+
+ /* section : header */
+ header {
+  height: 56px;
+}
+#img {
+  height: 45px;
+} 
+
+/* section : header de gauche*/
+.left {
+  height: 56px;
+  padding: 19px 10px 0px 20px!important;
+}
+
+#img-loupe {
+display: block;
+margin-left: 20px;
+margin-top: 0px;
+height: 18px;
+width: 18px;
+}
+
+.line {
+width: 30px;
+margin: 3px auto;
+}
+
+/* Fond d'écran à changer mensuellement */
+
+.backgroundChange::before {
+background-image: linear-gradient(to top, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 50%);
+}
+
+/* section : header de droite*/
+.right {
+  height: 56px;
+  padding: 3px 3px 3px 0px!important;
+}
+
+/* Ensemble des sections */
+.allSection {
+margin-top: 15%;
+}
+
+/* Sections : Général*/
+.marge {
+min-width:100%;
+height: auto;
+}
+
+.grid {
+margin-top: 30px;
+width: 100%;
+grid-template-columns: 1fr;
+gap: 5px;
+}
+
+/* Section : Vapeprivate Présente */
+.new {
+height: auto;
+margin-top: 20%;
+}
+
+.titreHaut {
+font-size: 35px;
+margin-left: 15px;
+color: rgb(70, 70, 80);
+}
+
+.sTitreHaut {
+font-size: 16px;
+margin-left: 15px;
+color: rgb(70, 70, 80);
+}
+
+.elm {
+width: 100%;
+height: 34.25vw;
+}
+
+/* Section : NOUVEAUTÉS DU JOUR, EN CE MOMENT, ENCORE QUELQUES JOURS */
+
+.ongoing {
+height: auto;
+padding: 40px 0px 0px;
+}
+
+.titreMilieu {
+font-size: 35px;
+margin-left: 15px;
+}
+
+.sTitreMilieu {
+font-size: 16px;
+margin-left: 15px;
+}
+/* Section : PROCHAINEMENT */
+
+.nextly {
+height: auto;
+padding: 40px 0px 0px;
+}
+
+.titreBas {
+font-size: 35px;
+margin-left: 15px;
+}
+
+.sTitreBas {
+font-size: 16px;
+margin-left: 15px;
+}
+
+/*  titre : Vous n'avez encore rien vu */
+.titre {
+	font-size: 26px;
+}
+
+/*  texte : Vous n'avez encore rien vu */
+.txt {
+	font-size: 16px;
+}
+
+/*  Bloc : S'inscrire + Se connecter */
+.bloc {
+  width: 375px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+/*  Bouton : S'inscrire */
+.register{
+  width: 160px!important;
+  height: 50px!important;
+}
+
+.button-register {
+  height: 50px!important;
+} 
+
+/*  Bouton : Se connecter */
+.login{
+  width: 160px!important;
+  height: 50px!important;
+}
+
+.button-login{
+  height: 50px!important;
+}
+
+}
